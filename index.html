@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Contact Form</title>
+</head>
+<body>
+
+<form id="contactForm" action="script/form.handler.php" method="POST">
+
+    <div class="form-group">
+        <label for="clientName">Full Name</label>
+        <input type="text" name="clientName" id="clientName" placeholder="Enter your full name"/>
+    </div>
+
+    <div class="form-group">
+        <label for="clientEmail">Email Address</label>
+        <input type="email" name="clientEmail" id="clientEmail" placeholder="Enter your email address"/>
+    </div>
+
+    <div class="form-group">
+        <label for="clientPhone">Phone Number</label>
+        <input type="tel" name="clientPhone" id="clientPhone" placeholder="Enter your phone number"/>
+    </div>
+
+    <div class="form-group">
+        <label for="clientSubject">Subject</label>
+        <input type="text" name="clientSubject" id="clientSubject" placeholder="Enter your subject"/>
+    </div>
+
+    <div class="form-group">
+        <label for="clientMessage">Message</label>
+        <textarea name="clientMessage" id="clientMessage"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success" id="submitForm">Send Form!</button>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

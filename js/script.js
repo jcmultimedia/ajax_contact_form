@@ -2,7 +2,7 @@
  * Created by Jason on 2018/05/20.
  */
 
-$("#form" ).validate({
+$("#contactForm" ).validate({
     rules: {
         clientName: "required",
         clientPhone: "required",
@@ -16,7 +16,7 @@ $("#form" ).validate({
         clientName: "Please enter your full name",
         clientPhone: "Please enter your contact number",
         clientEmail: "Please enter your email address",
-        clientSubject: "Please enter your business name",
+        clientSubject: "Please enter your subject"
 
     },
     errorElement: "em",
@@ -56,15 +56,15 @@ $("#form" ).validate({
 });
 
 
-$("#design-form").on("submit", function(e){
+$("#contactForm").on("submit", function(e){
     e.preventDefault();
 
-if($("#design-form").valid(){
+if($("#contactForm").valid()){
 $.ajax({
     type: 'POST',
-    url: 'form-handler.php',
+    url: 'script/form.handler.php',
     dataType: 'json',
-    data: $('#design-form').serialize(),
+    data: $('#contactForm').serialize(),
     beforeSend: function(){
 
         $('#loading').show();
@@ -87,4 +87,4 @@ $.ajax({
     }
 })
 }
-}
+});
